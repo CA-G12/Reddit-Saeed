@@ -6,6 +6,7 @@
     "scripts": {
         "dev": "NODE_ENV=development nodemon server/",
         "start": "NODE_ENV=production node server/",
+        "buildTables": "NODE_ENV=development node server/database/migration/createTables",
         "test": "jest"
     },
     "repository": {
