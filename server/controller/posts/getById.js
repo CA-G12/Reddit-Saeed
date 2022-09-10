@@ -13,7 +13,7 @@ module.exports = (req, res, next) => {
         }
       })
       .then((post) => {
-        res.status(201).json(post);
+        res.status(200).json(post);
       })
       .catch((err) => next(err));
   } catch (err) {
