@@ -39,6 +39,6 @@ u can olso see other users profiles in general without create account.
 
 ## Resources
 
-API documentation:
+API postman:
 
-- [Reddit Clone API's](https://www.getpostman.com/collections/3c96d39f0eb2d3ebdb12)
+- [Reddit Clone postman API's](https://www.getpostman.com/collections/3c96d39f0eb2d3ebdb12)
