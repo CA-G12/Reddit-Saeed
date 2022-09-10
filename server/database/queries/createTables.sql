@@ -1,6 +1,6 @@
 BEGIN;
 
-DROP TABLE IF EXISTS users CASCADE;
+DROP TABLE IF EXISTS users, posts CASCADE;
 
 CREATE TABLE users(
     id SERIAL PRIMARY KEY,
@@ -8,6 +8,14 @@ CREATE TABLE users(
     email VARCHAR(100) UNIQUE NOT NULL,
     avatar TEXT,
     password TEXT NOT NULL
+);
+
+CREATE TABLE posts(
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(100) NOT NULL,
+    content VARCHAR(100) NOT NULL,
+    user_id INT NOT NULL,
+    FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
 COMMIT;
