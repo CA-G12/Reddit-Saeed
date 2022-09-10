@@ -13,8 +13,8 @@ CREATE TABLE users(
 CREATE TABLE posts(
     id SERIAL PRIMARY KEY,
     title VARCHAR(100) NOT NULL,
-    content VARCHAR(100) UNIQUE NOT NULL,
-    user_id INT UNIQUE NOT NULL,
+    content VARCHAR(100) NOT NULL,
+    user_id INT NOT NULL,
     FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
