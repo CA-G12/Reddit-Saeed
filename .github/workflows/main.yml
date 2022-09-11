@@ -13,9 +13,8 @@ jobs:
   container-job:
     runs-on: ubuntu-latest
 
-    container:
-      node:16
-      # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    container: node:16
+
     services:
       postgres:
         image: postgres
@@ -29,6 +28,7 @@ jobs:
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
+
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
@@ -38,6 +38,7 @@ jobs:
 
       - name: Testing Routes
         run: npm test
+
         env:
           TEST_DB_URL: postgres://haha_test_user:root@localhost:5432/haha_test
           NODE_ENV: testing
