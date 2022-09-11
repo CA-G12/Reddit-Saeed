@@ -167,6 +167,7 @@ describe('routes Testing with database', () => {
         if (err) {
           return done(err);
         }
+        console.log(process.env.TOKEN, 'token hhhhhhhh');
         expect(res.body).toEqual({
           id: 1,
           title: 'BAZzOoOKABLACK',
@@ -190,7 +191,7 @@ describe('routes Testing with database', () => {
         if (err) {
           return done(err);
         }
-        console.log(process.env.TOKEN, 'token hhhhhhhh');
+
         expect(res.req.res['statusMessage']).toBe('Unprocessable Entity');
         return done();
       });
