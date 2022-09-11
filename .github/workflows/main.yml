@@ -40,5 +40,5 @@ jobs:
         run: npm test
         env:
           TEST_DB_URL: ${{ secrets.TEST_DB_URL }}
-          NODE_ENV: test
+          NODE_ENV: testing
           SECRET_TOKEN: ${{ secrets.SECERT_KEY }}
