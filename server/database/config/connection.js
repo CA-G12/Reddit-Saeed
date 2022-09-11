@@ -14,7 +14,6 @@ switch (NODE_ENV) {
     break;
   case 'testing':
     db_url = TEST_DB_URL;
-    ssl = { rejectUnauthorized: false };
     break;
   default:
     throw new Error('undifind database url');
