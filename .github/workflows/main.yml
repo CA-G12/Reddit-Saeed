@@ -39,6 +39,6 @@ jobs:
       - name: Testing Routes
         run: npm test
         env:
-          TEST_DB_URL: ${{ secrets.TEST_DB_URL }}
+          TEST_DB_URL: postgres://haha_test_user:root@localhost:5432/haha_test
           NODE_ENV: testing
           SECRET_TOKEN: ${{ secrets.SECERT_KEY }}
