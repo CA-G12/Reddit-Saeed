@@ -40,6 +40,6 @@ jobs:
         run: npm test
 
         env:
-          TEST_DB_URL: postgres://haha_test_user:root@localhost:5432/haha_test
+          TEST_DB_URL: postgres://haha_test_user:root@postgres:5432/haha_test
           NODE_ENV: testing
           SECRET_TOKEN: ${{ secrets.SECERT_KEY }}
