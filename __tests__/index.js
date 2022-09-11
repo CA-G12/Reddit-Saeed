@@ -190,6 +190,7 @@ describe('routes Testing with database', () => {
         if (err) {
           return done(err);
         }
+        console.log(process.env.TOKEN, 'token hhhhhhhh');
         expect(res.req.res['statusMessage']).toBe('Unprocessable Entity');
         return done();
       });
