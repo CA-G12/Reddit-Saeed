@@ -42,7 +42,7 @@ module.exports = (req, res, next) => {
         });
       })
       .then((token) => {
-        res.cookie('token', token, { httpOnly: true }).status(302).json({
+        res.cookie('token', token, { httpOnly: true }).status(201).json({
           sucess: true,
           username: username,
           operation: 'create user',
