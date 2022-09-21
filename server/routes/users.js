@@ -5,6 +5,6 @@ router.post('/users/signup', authUser.signUp);
 router.post('/users/signin', authUser.signIn);
 router.get('/users/signout', authUser.signOut);
 router.get('/users/:id', authUser.getUser);
-router.get('/users/:id', authUser.allUsers);
+router.get('/users', authUser.allUsers);
 
 module.exports = router;
