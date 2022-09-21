@@ -8,7 +8,7 @@ module.exports = (req, res, next) => {
         if (data.rows.length === 0) {
           throw custumError('not found', 404);
         } else {
-          return data;
+          return data.rows;
         }
       })
       .then((users) => {
