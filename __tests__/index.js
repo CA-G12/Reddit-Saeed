@@ -181,7 +181,7 @@ describe('routes Testing with database', () => {
     supertest(router)
       .post('/api/v1/posts')
       .send({
-        title: 'BAZzOo@OKABLACK',
+        title: 'BAZ',
         content: 'BAZzOoKAgmailcom',
       })
       .set('cookie', `token=${process.env.TOKEN}`)
