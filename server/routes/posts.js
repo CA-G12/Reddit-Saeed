@@ -3,6 +3,7 @@ const router = require('express').Router();
 const postController = require('../controller/posts');
 
 router.get('/posts', postController.getPosts);
+router.get('/posts/user/:id', postController.userPosts);
 router.get('/posts/:id', postController.getPost);
 router.post('/posts', isUserAuth, postController.createPost);
 router.put('/posts/:id', isUserAuth, postController.updatePost);
