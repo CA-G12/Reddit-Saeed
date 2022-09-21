@@ -3,5 +3,13 @@ const deletePost = require('./delete');
 const getPosts = require('./getAll');
 const getPost = require('./getById');
 const updatePost = require('./update');
+const userPosts = require('./userPosts');
 
-module.exports = { createPost, deletePost, getPost, getPosts, updatePost };
+module.exports = {
+  userPosts,
+  createPost,
+  deletePost,
+  getPost,
+  getPosts,
+  updatePost,
+};
